@@ -1,5 +1,5 @@
 const module = (function () {
-    const create = function (imagArray){
+    const create = function (imagArray, parentSelector){
         const imageArray = imagArray;
 
         const style = document.createElement('style');
@@ -91,7 +91,7 @@ const module = (function () {
         const sliderBox = document.createElement('div');
         sliderBox.classList.add('slider-box');
         sliderBox.append(images);
-        const parent = document.querySelector('body');
+        const parent = document.querySelector(parentSelector);
         parent.append(sliderBox);
 
         const main = document.createElement('div');
