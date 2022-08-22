@@ -101,14 +101,14 @@ const module = (function () {
         const prevBtn = document.createElement('div');
         prevBtn.classList.add('prev-btn');
         const prevBtnImg = document.createElement('img');
-        prevBtnImg.setAttribute('src', './assets/navigate_before_FILL0_wght400_GRAD0_opsz48.png');
+        prevBtnImg.setAttribute('src', './node_modules/@tomcoso/img-slider-one/assets/navigate_before_FILL0_wght400_GRAD0_opsz48.png');
         prevBtnImg.setAttribute('alt', 'previous picture');
         prevBtn.append(prevBtnImg);
 
         const nextBtn = document.createElement('div');
         nextBtn.classList.add('next-btn');
         const nextBtnImg = document.createElement('img');
-        nextBtnImg.setAttribute('src', './assets/navigate_next_FILL0_wght400_GRAD0_opsz48.png');
+        nextBtnImg.setAttribute('src', './node_modules/@tomcoso/img-slider-one/assets/navigate_next_FILL0_wght400_GRAD0_opsz48.png');
         nextBtnImg.setAttribute('alt', 'next picture');
         nextBtn.append(nextBtnImg);
 
