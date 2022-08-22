@@ -1,0 +1,20 @@
+{
+  "name": "@tomcoso/img-slider-one",
+  "version": "1.0.0",
+  "description": "Generates an image slider panel with the given images.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomcoso/img-slider-one.git"
+  },
+  "keywords": [],
+  "author": "tomcoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomcoso/img-slider-one/issues"
+  },
+  "homepage": "https://github.com/tomcoso/img-slider-one#readme"
+}
