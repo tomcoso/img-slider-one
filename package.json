@@ -1,6 +1,6 @@
 {
   "name": "@tomcoso/img-slider-one",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Generates an image slider panel with the given images",
   "main": "script.js",
   "scripts": {
