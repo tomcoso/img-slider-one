@@ -1,6 +1,6 @@
 {
   "name": "@tomcoso/img-slider-ts",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "Generates an image slider panel with the given images",
   "main": "script.js",
   "types": "script.d.ts",
