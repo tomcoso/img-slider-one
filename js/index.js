@@ -108,7 +108,7 @@ var Slider;
     const prevBtnImg = document.createElement("img");
     prevBtnImg.setAttribute(
       "src",
-      "https://fontawesome.com/icons/angle-left?f=classic&s=regular"
+      "https://cdn-icons-png.flaticon.com/512/860/860790.png"
     );
     prevBtnImg.setAttribute("alt", "previous picture");
     prevBtn.append(prevBtnImg);
@@ -117,7 +117,7 @@ var Slider;
     const nextBtnImg = document.createElement("img");
     nextBtnImg.setAttribute(
       "src",
-      "https://fontawesome.com/icons/angle-right?f=classic&s=regular"
+      "https://cdn-icons-png.flaticon.com/512/860/860828.png"
     );
     nextBtnImg.setAttribute("alt", "next picture");
     nextBtn.append(nextBtnImg);
