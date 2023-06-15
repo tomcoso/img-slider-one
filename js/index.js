@@ -108,7 +108,7 @@ var Slider;
     const prevBtnImg = document.createElement("img");
     prevBtnImg.setAttribute(
       "src",
-      "./node_modules/@tomcoso/img-slider-ts/js/assets/navigate_before_FILL0_wght400_GRAD0_opsz48.png"
+      "https://fontawesome.com/icons/angle-left?f=classic&s=regular"
     );
     prevBtnImg.setAttribute("alt", "previous picture");
     prevBtn.append(prevBtnImg);
@@ -117,7 +117,7 @@ var Slider;
     const nextBtnImg = document.createElement("img");
     nextBtnImg.setAttribute(
       "src",
-      "./node_modules/@tomcoso/img-slider-ts/js/assets/navigate_next_FILL0_wght400_GRAD0_opsz48.png"
+      "https://fontawesome.com/icons/angle-right?f=classic&s=regular"
     );
     nextBtnImg.setAttribute("alt", "next picture");
     nextBtn.append(nextBtnImg);
