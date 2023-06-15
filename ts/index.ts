@@ -113,7 +113,7 @@ namespace Slider {
     const prevBtnImg = document.createElement("img");
     prevBtnImg.setAttribute(
       "src",
-      "./node_modules/@tomcoso/img-slider-ts/assets/navigate_before_FILL0_wght400_GRAD0_opsz48.png"
+      "https://cdn-icons-png.flaticon.com/512/860/860790.png"
     );
     prevBtnImg.setAttribute("alt", "previous picture");
     prevBtn.append(prevBtnImg);
@@ -123,7 +123,7 @@ namespace Slider {
     const nextBtnImg = document.createElement("img");
     nextBtnImg.setAttribute(
       "src",
-      "./node_modules/@tomcoso/img-slider-ts/assets/navigate_next_FILL0_wght400_GRAD0_opsz48.png"
+      "https://cdn-icons-png.flaticon.com/512/860/860828.png"
     );
     nextBtnImg.setAttribute("alt", "next picture");
     nextBtn.append(nextBtnImg);
@@ -239,7 +239,7 @@ namespace Slider {
     prevBtn.addEventListener("click", () => reverseSlider());
     nextBtn.addEventListener("click", () => advanceSlider());
     indexBtnsArray.forEach((each) => each.addEventListener("click", gotoSlide));
-    var currentTimeout: number = setTimeout(advanceSlider, 5000);
+    var currentTimeout = setTimeout(advanceSlider, 5000);
   };
 }
 
