@@ -57,6 +57,10 @@ namespace Slider {
         .slider-box > .images > .main > .next-btn:hover {
             box-shadow: inset -10px 0px 10px -8px;
         }
+        .slider-box > .images > .main > div {
+          height: 100%;
+          width: 40%;
+        }
         .slider-box > .index-btns {
             height: min-content;
             display: flex;
@@ -72,16 +76,13 @@ namespace Slider {
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            border: 1px solid white;
-            opacity: .5;
-            transition-delay: 500ms;
+            border: 1px solid rgba(255,255,255,0.5);
+            transition-delay: 150ms;
         }
         .slider-box > .index-btns > .current {
-            border: 2px solid white;
-            opacity: 1;
+            border: 1px solid white;
         }
         .slider-box > .images > div:not(.main) {
-            transition: transform 500ms ease-out;
             box-shadow: 0px 0px 20px 10px #000;
             opacity: 0;
             position: relative;
@@ -110,23 +111,23 @@ namespace Slider {
 
     const prevBtn = document.createElement("div");
     prevBtn.classList.add("prev-btn");
-    const prevBtnImg = document.createElement("img");
-    prevBtnImg.setAttribute(
-      "src",
-      "https://cdn-icons-png.flaticon.com/512/860/860790.png"
-    );
-    prevBtnImg.setAttribute("alt", "previous picture");
-    prevBtn.append(prevBtnImg);
+    // const prevBtnImg = document.createElement("img");
+    // prevBtnImg.setAttribute(
+    //   "src",
+    //   "https://cdn-icons-png.flaticon.com/512/860/860790.png"
+    // );
+    // prevBtnImg.setAttribute("alt", "previous picture");
+    // prevBtn.append(prevBtnImg);
 
     const nextBtn = document.createElement("div");
     nextBtn.classList.add("next-btn");
-    const nextBtnImg = document.createElement("img");
-    nextBtnImg.setAttribute(
-      "src",
-      "https://cdn-icons-png.flaticon.com/512/860/860828.png"
-    );
-    nextBtnImg.setAttribute("alt", "next picture");
-    nextBtn.append(nextBtnImg);
+    // const nextBtnImg = document.createElement("img");
+    // nextBtnImg.setAttribute(
+    //   "src",
+    //   "https://cdn-icons-png.flaticon.com/512/860/860828.png"
+    // );
+    // nextBtnImg.setAttribute("alt", "next picture");
+    // nextBtn.append(nextBtnImg);
 
     const indexBtns = document.createElement("div");
     indexBtns.classList.add("index-btns");
@@ -158,6 +159,11 @@ namespace Slider {
       return imageArray.findIndex((x) => x === url);
     };
 
+    const keyframeOptions = {
+      duration: 500,
+      easing: "cubic-bezier(.41, .01, .25, 1)",
+    };
+
     const advanceSlider = function (optIndex?: number) {
       clearTimeout(currentTimeout);
       if (imageArray.length < 2) return;
@@ -181,7 +187,7 @@ namespace Slider {
           { transform: "translateX(-100%)", opacity: 1, offset: 1 },
           { opacity: 0 },
         ],
-        500
+        keyframeOptions
       );
       main.setAttribute(
         "style",
@@ -213,7 +219,7 @@ namespace Slider {
           { transform: "translateX(100%)", opacity: 1, offset: 1 },
           { opacity: 0 },
         ],
-        500
+        keyframeOptions
       );
       main.setAttribute(
         "style",
