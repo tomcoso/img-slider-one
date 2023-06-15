@@ -185,8 +185,7 @@ var Slider;
         const gotoSlide = function (e) {
             if (imageArray.length < 2)
                 return;
-            console.log(e, e.path, e.composedPath());
-            let element = e.path[0];
+            let element = e.target;
             const target = indexBtnsArray.indexOf(element);
             const currentIndex = getCurrentIndex();
             if (currentIndex < target) {

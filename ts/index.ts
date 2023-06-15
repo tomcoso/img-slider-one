@@ -144,7 +144,7 @@ namespace Slider {
     next.classList.add("next");
     images.append(prev, main, next);
 
-    const indexBtnsArray = [...indexBtns.children];
+    const indexBtnsArray: Element[] = [...indexBtns.children];
 
     const getCurrentIndex = function () {
       let matchArray = main.style
@@ -222,10 +222,9 @@ namespace Slider {
       currentTimeout = setTimeout(advanceSlider, 5000);
     };
 
-    const gotoSlide = function (e: any) {
+    const gotoSlide = function (e: Event) {
       if (imageArray.length < 2) return;
-      console.log(e, e.path, e.composedPath());
-      let element: Element = e.path[0];
+      let element = e.target as Element;
       const target = indexBtnsArray.indexOf(element);
 
       const currentIndex = getCurrentIndex();
