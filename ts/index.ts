@@ -159,6 +159,7 @@ namespace Slider {
     };
 
     const advanceSlider = function (optIndex?: number) {
+      clearTimeout(currentTimeout);
       if (imageArray.length < 2) return;
       const currentIndex = getCurrentIndex();
       let nextPic: number;
@@ -186,8 +187,11 @@ namespace Slider {
         "style",
         `background-image: url('${imageArray[nextPic]}')`
       );
+      currentTimeout = setTimeout(advanceSlider, 5000);
     };
+
     const reverseSlider = function (optIndex?: number) {
+      clearTimeout(currentTimeout);
       if (imageArray.length < 2) return;
       const currentIndex = getCurrentIndex();
       let nextPic: number;
@@ -215,10 +219,12 @@ namespace Slider {
         "style",
         `background-image: url('${imageArray[nextPic]}')`
       );
+      currentTimeout = setTimeout(advanceSlider, 5000);
     };
 
     const gotoSlide = function (e: any) {
       if (imageArray.length < 2) return;
+      console.log(e, e.path, e.composedPath());
       let element: Element = e.path[0];
       const target = indexBtnsArray.indexOf(element);
 
@@ -234,7 +240,7 @@ namespace Slider {
     prevBtn.addEventListener("click", () => reverseSlider());
     nextBtn.addEventListener("click", () => advanceSlider());
     indexBtnsArray.forEach((each) => each.addEventListener("click", gotoSlide));
-    setInterval(advanceSlider, 5000);
+    var currentTimeout: number = setTimeout(advanceSlider, 5000);
   };
 }
 
